@@ -1,0 +1,28 @@
+		ldc string   ;reads in a decimal number and displays its value times 7 in decimal
+		sout
+		din
+		st n1
+mult:   ldc 0
+		st result
+
+loop:	ld count
+		jz exit
+		ld result
+		add n1
+		st result
+		ld count
+		sub one
+		st count
+		ja loop
+
+exit:   ld result
+		dout
+		halt
+		
+
+string: dw "Input a decimal: "
+
+n1:     dw 2
+result: dw 8
+count: 	dw 7
+one:    dw 1

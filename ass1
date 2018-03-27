@@ -1,0 +1,29 @@
+		ldc string 
+		sout	
+		sin
+		st buffer
+
+loop:	ld a	
+		sub index
+		jn exit
+		ldc buffer
+		add index
+		ldi
+		st temp
+		ld null
+		sub temp
+		jz exit
+		ld space
+		sub temp
+		jz loop
+		call num
+
+num:	ld buffer
+		add index
+		ldi
+
+
+buffer:	dw 10 dup 0
+index:	dw 0
+null:	dw '\0'
+space:	dw 32

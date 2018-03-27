@@ -1,0 +1,28 @@
+xx:		dw 6
+yy:		dw 7
+start:	ld yy
+		push
+		ld xx
+		push
+		call mult
+rtn:	pop
+		dout
+		pop	
+		halt
+mult:	ldc 0
+		st prod
+		ldr 1
+		jz ans
+loop:	ld prod
+		addr 2
+		st prod
+		ldr 1
+		sub one
+		str 1
+		jnz loop
+ans:	ld prod
+		str 1
+		ret
+one:	dw 1
+prod:	dw 0
+		end start

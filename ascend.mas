@@ -1,0 +1,74 @@
+		ldc string
+		sout
+		din
+		str n1
+		push
+		din
+		str n2
+		push
+		din
+		str n3
+		push
+		din
+		str n4
+		push
+		din
+		str n5
+		push
+		din 
+		str n6
+		push
+		din 
+		str n7
+		push
+		din
+		str n8
+		push
+		din
+		str n9
+		push
+		din 
+		str n10
+		push
+
+
+loop:	ld count
+		jz exit
+		ld n1
+		sub n2
+		st big
+		jnz exit
+		ld count
+		ja loop
+
+exit:	ld big
+		dout
+		halt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string: dw "Input 10 decimals: "
+n1:		dw 0
+n2:		dw 0	
+n3:		dw 0
+n4:		dw 0	
+n5:		dw 0	
+n6: 	dw 0
+n7:		dw 0	
+n8:		dw 0
+n9:		dw 0
+n10:	dw 0
+one: 	dw 1
+big:	dw 0
+count: 	dw 10

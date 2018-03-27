@@ -1,0 +1,176 @@
+Machine-level Assembler Version 6.3    Wed Sep 20 20:13:59 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    000A  xx:			dw 10
+1  *1    0000  yy:			dw 0
+2  *2    8025  			ldc string
+3  *3    FFF7  			sout
+4  *4    FFF6  			sin
+5  *5    106E  			st buffer
+               
+6  *6    806E  loop:		ldc buffer
+7  *7    2057  			add index
+8  *8    F100  			ldi
+9  *9    1023  			st value
+A  *10   C01A  			jz exit
+B  *11   3022  			sub space
+C  *12   C00F  			jz inc_index
+D  *13   E013  			call num
+E  *14   9006  			ja loop
+               
+               			
+               	
+               
+               
+               
+F  *15   0057  inc_index:	ld index
+10 *16   2058  			add one
+11 *17   1057  			st index
+12 *18   9006  			ja loop
+               
+13 *19   4023  num:		ldr value
+14 *20   6001  			addr 1
+15 *21   F000  			ret
+               		
+               
+16 *22   8000  mult:		ldc 0
+17 *23   1024  			st prod
+18 *24   4001  			ldr 1
+19 *25   C01F  			jz ans
+               
+1A *26   0059  exit: 		ld msg1
+1B *27   FFF7  			sout
+1C *28   0023  			ld value 
+1D *29   FFFD  			dout
+1E *30   FFFF  			halt
+               
+               
+               
+               
+               
+               
+               
+               
+1F *31   0024  ans:	ld prod
+20 *32   5001  		str 1	
+21 *33   F000  		ret
+               
+22 *34   0020  space: dw 32
+               
+23 *35   0000  value:	dw 0
+               
+24 *36   0000  prod:	dw 0
+               
+25 *37   0049  string: dw "Input a string of intergers seperated by spaces: "
+26 *38   006E
+27 *39   0070
+28 *40   0075
+29 *41   0074
+2A *42   0020
+2B *43   0061
+2C *44   0020
+2D *45   0073
+2E *46   0074
+2F *47   0072
+30 *48   0069
+31 *49   006E
+32 *50   0067
+33 *51   0020
+34 *52   006F
+35 *53   0066
+36 *54   0020
+37 *55   0069
+38 *56   006E
+39 *57   0074
+3A *58   0065
+3B *59   0072
+3C *60   0067
+3D *61   0065
+3E *62   0072
+3F *63   0073
+40 *64   0020
+41 *65   0073
+42 *66   0065
+43 *67   0070
+44 *68   0065
+45 *69   0072
+46 *70   0061
+47 *71   0074
+48 *72   0065
+49 *73   0064
+4A *74   0020
+4B *75   0062
+4C *76   0079
+4D *77   0020
+4E *78   0073
+4F *79   0070
+50 *80   0061
+51 *81   0063
+52 *82   0065
+53 *83   0073
+54 *84   003A
+55 *85   0020
+56 *86   0000
+               
+57 *87   0000  index:	dw 0
+               
+58 *88   0000  one:	dw 0
+               
+59 *89   0054  msg1: 	dw "The final value is: "
+5A *90   0068
+5B *91   0065
+5C *92   0020
+5D *93   0066
+5E *94   0069
+5F *95   006E
+60 *96   0061
+61 *97   006C
+62 *98   0020
+63 *99   0076
+64 *100  0061
+65 *101  006C
+66 *102  0075
+67 *103  0065
+68 *104  0020
+69 *105  0069
+6A *106  0073
+6B *107  003A
+6C *108  0020
+6D *109  0000
+               
+6E *110  0000  buffer: dw 80 dup 0
+               
+BE *190  0000  result: dw 80 dup 0
+10E*270  ========= end of prg1.mas ===============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ xx                        0          
+ yy                        1          
+ loop                      6           E   12 
+ inc_index                 F           C  
+ num                       13          D  
+ mult                      16         
+ exit                      1A          A  
+ ans                       1F          19 
+ space                     22          B  
+ value                     23          9   13  1C 
+ prod                      24          17  1F 
+ string                    25          2  
+ index                     57          7   F   11 
+ one                       58          10 
+ msg1                      59          1A 
+ buffer                    6E          5   6  
+ result                    BE         
+
+Input file   = prg1.mas
+Output file  = prg1.mac
+List file    = prg1.lst 
+Number base  = decimal
+Label status = case sensitive

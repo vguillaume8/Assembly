@@ -1,0 +1,40 @@
+		ldc string
+		sout
+		sin
+		str s
+		st length
+loop:	ld s
+		jz exit
+		sub one
+		ja loop
+
+
+exit: 	dout
+		halt
+
+
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string: dw "Insert a string: "
+s: 		dw 100 dup 0
+one:	dw 0
+length: dw 0

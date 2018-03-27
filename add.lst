@@ -1,0 +1,18 @@
+Machine-level Assembler Version 6.3    Mon Sep 18 00:53:45 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    0004  		ld 4
+1  *1    2FDD  		add -35
+2  *2    2010  		add 16
+3  *3    222B  		add 555
+4  *4    2FF8  		add	-8
+5  *5    1005  		st 5
+6  *6    ========= end of add.mas ================================
+
+Input file   = add.mas
+Output file  = add.mac
+List file    = add.lst 
+Number base  = decimal
+Label status = case sensitive

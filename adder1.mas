@@ -1,0 +1,26 @@
+			ldc msg1
+			sout
+			din
+			st count
+loop:		jz exit
+			ldc msg2
+			sout
+			din
+			add sum
+			st sum
+			ld count
+			sub one
+			st count
+			ja loop
+exit:		ldc msg3
+			sout
+			ld sum
+			dout
+			halt
+
+sum:		dw 0
+one:		dw 1
+count:		dw 0
+msg1:		dw "How many integers to add?  "
+msg2:		dw "Input an integer:  "
+msg3:		dw "sum =  "

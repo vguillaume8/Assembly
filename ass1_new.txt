@@ -1,0 +1,14 @@
+sim Version 6.3 Log File ass1.log
+
+Your name          = Run mod sim /r to put your name here
+Machinecode file   = ass1.mac     Size =  B9 (hex) =  185 (dec)
+Microcode file     = none         Size =  93 (hex) =  147 (dec)
+======================== Log turned on  Thu Sep 28 17:59:36 2017
+---- [T7] g
+Input a string of intergers seperated by spaces: 
+38 5
+43This is your final value:  43
+Machine inst count =   5B8 (hex) =   1464 (dec)
+Micro   inst count =  3A94 (hex) =  14996 (dec)
+---- [T7] q
+================== sim(9f0d) terminated Thu Sep 28 17:59:43 2017

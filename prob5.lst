@@ -1,0 +1,177 @@
+Machine-level Assembler Version 6.3    Mon Oct  9 19:48:26 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    8021                      ldc string2
+1  *1    FFF7                      sout
+2  *2    8050                      ldc n
+3  *3    FFFC                      din
+4  *4    1050                      st n
+               
+               
+               
+5  *5    0050  loop:               ld n
+6  *6    C01C                      jz exit
+7  *7    803B                      ldc string
+8  *8    FFF7                      sout
+9  *9    804E                      ldc input
+A  *10   FFFC                      din
+B  *11   104E                      st input
+C  *12   004E                      ld input
+D  *13   F300                      push
+E  *14   9017                      ja abs
+F  *15   F400  rtn:                pop
+10 *16   104E                      st input
+11 *17   204F                      add total
+12 *18   104F                      st total
+13 *19   0050                      ld n
+14 *20   3051                      sub one
+15 *21   1050                      st n
+16 *22   9005                      ja loop
+               
+17 *23   A00F  abs:                jzop rtn
+               
+               
+               
+18 *24   304E  neg:                sub input
+19 *25   304E                      sub input
+1A *26   F300                      push
+1B *27   900F                      ja rtn
+               
+1C *28   8052  exit:               ldc final
+1D *29   FFF7                      sout
+1E *30   004F                      ld total
+1F *31   FFFD                      dout
+20 *32   FFFF                      halt
+               
+               
+21 *33   0048  string2:            dw "How many input integer?: "
+22 *34   006F
+23 *35   0077
+24 *36   0020
+25 *37   006D
+26 *38   0061
+27 *39   006E
+28 *40   0079
+29 *41   0020
+2A *42   0069
+2B *43   006E
+2C *44   0070
+2D *45   0075
+2E *46   0074
+2F *47   0020
+30 *48   0069
+31 *49   006E
+32 *50   0074
+33 *51   0065
+34 *52   0067
+35 *53   0065
+36 *54   0072
+37 *55   003F
+38 *56   003A
+39 *57   0020
+3A *58   0000
+3B *59   0045  string:             dw "Enter an integer? "
+3C *60   006E
+3D *61   0074
+3E *62   0065
+3F *63   0072
+40 *64   0020
+41 *65   0061
+42 *66   006E
+43 *67   0020
+44 *68   0069
+45 *69   006E
+46 *70   0074
+47 *71   0065
+48 *72   0067
+49 *73   0065
+4A *74   0072
+4B *75   003F
+4C *76   0020
+4D *77   0000
+4E *78   0000  input:              dw 0
+4F *79   0000  total:              dw 0
+50 *80   0000  n:                  dw 0
+51 *81   0001  one:                dw 1
+52 *82   0054  final:              dw "The sum of the absolute values of the in
+53 *83   0068
+54 *84   0065
+55 *85   0020
+56 *86   0073
+57 *87   0075
+58 *88   006D
+59 *89   0020
+5A *90   006F
+5B *91   0066
+5C *92   0020
+5D *93   0074
+5E *94   0068
+5F *95   0065
+60 *96   0020
+61 *97   0061
+62 *98   0062
+63 *99   0073
+64 *100  006F
+65 *101  006C
+66 *102  0075
+67 *103  0074
+68 *104  0065
+69 *105  0020
+6A *106  0076
+6B *107  0061
+6C *108  006C
+6D *109  0075
+6E *110  0065
+6F *111  0073
+70 *112  0020
+71 *113  006F
+72 *114  0066
+73 *115  0020
+74 *116  0074
+75 *117  0068
+76 *118  0065
+77 *119  0020
+78 *120  0069
+79 *121  006E
+7A *122  0070
+7B *123  0075
+7C *124  0074
+7D *125  0020
+7E *126  0076
+7F *127  0061
+80 *128  006C
+81 *129  0075
+82 *130  0065
+83 *131  0073
+84 *132  003A
+85 *133  0020
+86 *134  0000
+87 *135  ========= end of prob5.mas ==============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ loop                      5           16 
+ rtn                       F           17  1B 
+ abs                       17          E  
+ neg                       18         
+ exit                      1C          6  
+ string2                   21          0  
+ string                    3B          7  
+ input                     4E          9   B   C   10  18 
+                                       19 
+ total                     4F          11  12  1E 
+ n                         50          2   4   5   13  15 
+ one                       51          14 
+ final                     52          1C 
+
+Input file   = prob5.mas
+Output file  = prob5.mac
+List file    = prob5.lst 
+Number base  = decimal
+Label status = case sensitive

@@ -1,0 +1,13 @@
+sim Version 6.3 Log File mult7.log
+
+Your name          = Run mod sim /r to put your name here
+Machinecode file   = mult7.mac    Size =  28 (hex) =   40 (dec)
+Microcode file     = none         Size =  93 (hex) =  147 (dec)
+======================== Log turned on  Wed Sep 13 21:03:19 2017
+---- [T7] g
+Input a decimal: 4
+28
+Machine inst count =    4A (hex) =     74 (dec)
+Micro   inst count =   2C2 (hex) =    706 (dec)
+---- [T7] q
+================== sim(cf13) terminated Wed Sep 13 21:03:30 2017

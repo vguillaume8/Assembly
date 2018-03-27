@@ -1,0 +1,29 @@
+Machine-level Assembler Version 6.3    Wed Sep 13 21:09:42 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    0000  		ld 0
+1  *1    0001  z:		ld 1
+2  *2    0001  		ld z
+3  *3    1004  s:		st x
+4  *4    FFFF  x:		halt
+5  *5    3001  		sub z
+6  *6    9003  		ja s
+7  *7    ========= end of qfour.mas ==============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ z                         1           2   5  
+ s                         3           6  
+ x                         4           3  
+
+Input file   = qfour.mas
+Output file  = qfour.mac
+List file    = qfour.lst 
+Number base  = decimal
+Label status = case sensitive

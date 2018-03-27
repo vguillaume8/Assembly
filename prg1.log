@@ -1,0 +1,18 @@
+sim Version 6.3 Log File prg1.log
+
+Your name          = Run mod sim /r to put your name here
+Machinecode file   = prg1.mac     Size = 10E (hex) =  270 (dec)
+Microcode file     = none         Size =  93 (hex) =  147 (dec)
+======================== Log turned on  Wed Sep 20 20:14:08 2017
+======================== Starting session ======================
+---- [T7] 0: ld   /0 00A/ n
+No display mode
+---- [T7] g
+Input a string of intergers seperated by spaces: 1 2
+
+WARNING: Possible infinite loop
+Machine inst count =  8F23 (hex) =  36643 (dec)
+Debugger activated
+Enter q (quit), g (go), or other command
+---- [T7] q
+================== sim(8c21) terminated Wed Sep 20 20:14:18 2017

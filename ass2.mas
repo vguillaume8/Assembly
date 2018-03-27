@@ -1,0 +1,113 @@
+
+loop:       ldc string
+            sout
+            ldc yes_no
+            sin
+            st yes_no
+            sub n
+            jz exit
+            ldc input_n
+            sout
+            din
+            st n
+            push
+            jn setflag_n
+rtn_n:      ldc input_m
+            sout
+            din
+            st m
+            push
+            jn setflag_m
+rtn_m       ja loop2
+            ld n
+            st nn
+ret:        pop
+            ldc n_equals
+            sout
+            ld n
+            dout
+            ldc m_equals
+            sout
+            ld m
+            dout
+            ldc q_equals
+            sout
+            ld q
+            dout
+            ldc r_equals
+            sout
+            ld r
+            dout
+
+            ja loop
+
+loop2:      ld nn
+            jz compute
+            ld m
+            add m
+            add s
+            st s
+            ld nn
+            sub one
+            st nn
+            ld q
+            add one
+            st q
+;----------------------------------------------------------------------------------
+compute:    ld n
+            sub s
+            st r
+            jn push
+            ja ret
+
+
+
+;----------------------------------------------------------------------------------
+
+setflag_n:  ld flag					; Add flags for negative Numbers
+			      add @1
+			      st flag
+            ja abs_n
+
+abs_n:      ld n
+            sub n
+            sub n
+            st n
+            ja rtn_n
+;----------------------------------------------------------------------------------
+
+setflag_m:  ld flag					; Add flags for negative Numbers
+  			    add @1
+  			    st flag
+            ja abs_m
+
+abs_m:      ld m
+            sub m
+            sub m
+            st m
+            ja rtn_m
+;----------------------------------------------------------------------------------
+
+exit:       ldc string2
+            sout
+            halt
+;----------------------------------------------------------------------------------
+count:      dw 0
+n_equals:   dw "n = "
+m_equals:   dw "m = "
+q_equals:   dw "q = "
+r_equals:   dw "r = "
+one:        dw 1
+flag:       dw 0
+string:     dw "Do you have an integer division problem? 'y' for yes, 'n' for no "
+string2:    dw "No more integer division problems "
+input_n:    dw "Input number to divide"
+input_m:    dw "Input number to divide by "
+yes_no:     dw 10 dup 0
+n:          dw 0
+m:          dw 0
+yes:        dw 'y'
+no:         dw 'n'
+s:          dw 0
+q:          dw 0
+r:          dw 0

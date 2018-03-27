@@ -1,0 +1,99 @@
+Machine-level Assembler Version 6.3    Thu Oct  5 21:40:41 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    8018          ldc string
+1  *1    FFF7          sout
+2  *2    803F          ldc input
+3  *3    FFF6          sin
+4  *4    803F          ldc input
+5  *5    FFF7          sout
+               
+6  *6    803F  loop:   ldc input
+7  *7    2027          add index
+8  *8    F100          ldi
+9  *9    C013          jz exit
+A  *10   3028          sub space
+B  *11   D00F          jnz inc
+C  *12   002A          ld count
+D  *13   202B          add one
+E  *14   102A          st count
+F  *15   0027  inc:    ld index
+10 *16   202B          add one
+11 *17   1027          st index
+12 *18   9006          ja loop
+               
+               
+13 *19   802C  exit:   ldc output
+14 *20   FFF7          sout
+15 *21   002A          ld count
+16 *22   FFFD          dout
+17 *23   FFFF          halt
+               
+               
+18 *24   0045  string: dw "Enter a string"
+19 *25   006E
+1A *26   0074
+1B *27   0065
+1C *28   0072
+1D *29   0020
+1E *30   0061
+1F *31   0020
+20 *32   0073
+21 *33   0074
+22 *34   0072
+23 *35   0069
+24 *36   006E
+25 *37   0067
+26 *38   0000
+               
+27 *39   0000  index:  dw 0
+28 *40   0020  space:  dw " "
+29 *41   0000
+2A *42   0000  count:  dw 0
+2B *43   0001  one:    dw 1
+2C *44   004E  output: dw "Number of Spaces: "
+2D *45   0075
+2E *46   006D
+2F *47   0062
+30 *48   0065
+31 *49   0072
+32 *50   0020
+33 *51   006F
+34 *52   0066
+35 *53   0020
+36 *54   0053
+37 *55   0070
+38 *56   0061
+39 *57   0063
+3A *58   0065
+3B *59   0073
+3C *60   003A
+3D *61   0020
+3E *62   0000
+3F *63   0000  input:  dw 10 dup 0
+49 *73   ========= end of count_spaces.mas =======================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ loop                      6           12 
+ inc                       F           B  
+ exit                      13          9  
+ string                    18          0  
+ index                     27          7   F   11 
+ space                     28          A  
+ count                     2A          C   E   15 
+ one                       2B          D   10 
+ output                    2C          13 
+ input                     3F          2   4   6  
+
+Input file   = count_spaces.mas
+Output file  = count_spaces.mac
+List file    = count_spaces.lst 
+Number base  = decimal
+Label status = case sensitive

@@ -1,0 +1,139 @@
+main:		ldc 	string
+			sout
+			;ldc 	buffer
+			sin
+			st 		buffer
+
+loop:		
+			ldc 	buffer		; loads the string and reads each character
+			add		index
+			ldi
+			jz		exit
+			st 		temp    	; stores character to variable temp
+			
+			ja		inc_index	; increases index
+
+ret_ind:	ld      temp
+			sub		null		; if null, end loop, jump to exit
+			jz      exit
+
+			ld      temp
+			sub		space		; if space, restart loop
+			jz 		loop
+			;st 		temp
+
+			call 	@num		; calls @num function
+return:		pop					; pops value
+			add		tot			; adds to total of values
+			st 		tot
+			dout				; prints total of values
+
+			ja 		loop		; restarts loop
+;------------------------------------------------------------------------
+inc_index:	ld 		index		; index++, Increase the index
+			add		@1
+			st 		index
+			ja		ret_ind
+;------------------------------------------------------------------------
+inc_index2:	ld 		index		; index++, Increase the index
+			add		@1
+			st 		index
+			ja		return2
+
+
+
+;---------------------------------------------------------------------------
+@num:		ld 		value		; value = 0
+			push				; pushes value onto the stack
+
+			ldc 	buffer		; for negative numbers
+			ldi	
+			sub		minus
+			jz		setflag
+loc_neg:	add 	index
+
+
+loop2:							; Converts Ascii to Binary	
+
+			ldc 	buffer
+			ldi
+			sub 	bin
+			st 		d
+
+
+			call 	mult		; calls mult function
+ret_mult:	st 		value		; stores return value
+			push
+
+			ja  	inc_index2	; call increase index function
+return2:	add 	index 		; moves to next character
+			ldi		
+			st 		temp		; stores in temp
+			
+			ld 		temp		; if null will jump back to main loop
+			sub		space
+			jz		return
+
+			ld 		temp		; if space will jump back to main loop
+			sub 	space
+			jz 		return
+
+			ja		loop2		; if num will restart num
+			;ret
+
+
+;------------------------------------------------------------------------
+mult:		ld 		count		; count is at 10
+			jz		done_mult	; goes back to mult when reaches 0
+			ld  	value
+			st 		tempprod
+			ldr     1
+			add 	tempprod
+			st      tempprod
+			ld 		count
+			sub		@1	 		; subtract 1
+			st 		count
+			ja		mult
+;--------------------------------------------------------------------------------
+
+done_mult:	ld 		tempprod	; loads temp prod
+			add     d           ; add binary number
+			str     1
+			ja		ret_mult    ; return
+;-------------------------------------------------
+
+
+setflag:	ld flag					; Add flags for negative Numbers
+			add @1
+			st flag	
+			ja loc_neg
+;--------------------------------------------------------
+
+exit:		ldc 	string2
+			sout
+			ld 		tot
+			dout
+			halt
+			end		main
+
+		
+;--------------------------------
+d:		dw 0
+n1:		dw 2
+tempprod: dw 0
+prod:	dw 0
+count:  dw 10
+bin: 	dw 30h
+flag:	dw 0
+tot:	dw 0
+minus:	dw 77
+value:	dw 0
+@1:		dw 1
+@10:	dw 10
+string: dw "Input a string of intergers seperated by spaces: \n"
+string2:dw "This is your final value:  "
+space:	dw 32
+null:	dw '/0'
+temp: 	dw 0
+index:	dw	0
+buffer: dw 10 dup 0

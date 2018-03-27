@@ -1,0 +1,118 @@
+Machine-level Assembler Version 6.3    Wed Sep 13 20:53:29 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    8021  		ldc string
+1  *1    FFF7  		sout
+2  *2    FFFC  		din
+3  *3    5035  		str n1
+4  *4    FFFC  		din
+5  *5    5036  		str n2
+6  *6    FFFC  		din
+7  *7    5037  		str n3
+8  *8    FFFC  		din
+9  *9    5038  		str n4
+A  *10   FFFC  		din
+B  *11   5039  		str n5
+C  *12   FFFC  		din 
+D  *13   503A  		str n6
+E  *14   FFFC  		din 
+F  *15   503B  		str n7
+10 *16   FFFC  		din
+11 *17   503C  		str n8
+12 *18   FFFC  		din
+13 *19   503D  		str n9
+14 *20   FFFC  		din 
+15 *21   503E  		str n10
+               
+               
+16 *22   0041  loop:	ld count
+17 *23   C01E  		jz exit
+18 *24   0035  		ld n1
+19 *25   3036  		sub n2
+1A *26   1040  		st big
+1B *27   D016  		jnz loop
+1C *28   0041  		ld count
+1D *29   9016  		ja loop
+               
+1E *30   0040  exit:	ld big
+1F *31   FFFD  		dout
+20 *32   FFFF  		halt
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+21 *33   0049  string: dw "Input 10 decimals: "
+22 *34   006E
+23 *35   0070
+24 *36   0075
+25 *37   0074
+26 *38   0020
+27 *39   0031
+28 *40   0030
+29 *41   0020
+2A *42   0064
+2B *43   0065
+2C *44   0063
+2D *45   0069
+2E *46   006D
+2F *47   0061
+30 *48   006C
+31 *49   0073
+32 *50   003A
+33 *51   0020
+34 *52   0000
+35 *53   0000  n1:		dw 0
+36 *54   0000  n2:		dw 0	
+37 *55   0000  n3:		dw 0
+38 *56   0000  n4:		dw 0	
+39 *57   0000  n5:		dw 0	
+3A *58   0000  n6: 	dw 0
+3B *59   0000  n7:		dw 0	
+3C *60   0000  n8:		dw 0
+3D *61   0000  n9:		dw 0
+3E *62   0000  n10:	dw 0
+3F *63   0001  one: 	dw 1
+40 *64   0000  big:	dw 0
+41 *65   000A  count: 	dw 10
+42 *66   ========= end of ascend.mas =============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ loop                      16          1B  1D 
+ exit                      1E          17 
+ string                    21          0  
+ n1                        35          3   18 
+ n2                        36          5   19 
+ n3                        37          7  
+ n4                        38          9  
+ n5                        39          B  
+ n6                        3A          D  
+ n7                        3B          F  
+ n8                        3C          11 
+ n9                        3D          13 
+ n10                       3E          15 
+ one                       3F         
+ big                       40          1A  1E 
+ count                     41          16  1C 
+
+Input file   = ascend.mas
+Output file  = ascend.mac
+List file    = ascend.lst 
+Number base  = decimal
+Label status = case sensitive

@@ -1,0 +1,37 @@
+        ldc string
+        sout
+        ldc input
+        sin
+        ldc input
+        sout
+
+loop:   ldc input
+        add index
+        ldi
+        jz exit
+        sub space
+        jnz inc
+        ld count
+        add one
+        st count
+inc:    ld index
+        add one
+        st index
+        ja loop
+
+
+exit:   ldc output
+        sout
+        ld count
+        dout
+        halt
+
+
+string: dw "Enter a string"
+
+index:  dw 0
+space:  dw " "
+count:  dw 0
+one:    dw 1
+output: dw "Number of Spaces: "
+input:  dw 10 dup 0

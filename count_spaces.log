@@ -1,0 +1,20 @@
+sim Version 6.3 Log File count_spaces.log
+
+Your name          = Run mod sim /r to put your name here
+Machinecode file   = count_spaces.mac Size =  49 (hex) =   73 (dec)
+Microcode file     = none         Size =  93 (hex) =  147 (dec)
+======================== Log turned on  Wed Oct  4 21:19:33 2017
+======================== Starting session ======================
+---- [T7] 0: ldc  /8 018/ n
+No display mode
+---- [T7] g
+Enter a string 12 g 4 y5 4
+ 12 g 4 y5 4Number of Spaces: 5
+Machine inst count =    96 (hex) =    150 (dec)
+Micro   inst count =   5C5 (hex) =   1477 (dec)
+---- [T7] 
+Now at halt.  Enter o to do over, q to quit, or h or ? for help.
+---- [T7] 
+Now at halt.  Enter o to do over, q to quit, or h or ? for help.
+---- [T7] q
+================== sim(3625) terminated Wed Oct  4 21:21:12 2017

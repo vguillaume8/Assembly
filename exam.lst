@@ -1,0 +1,36 @@
+Machine-level Assembler Version 6.3    Thu Oct  5 21:34:44 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    0002  two:      dw      2
+1  *1    FFF9            hout      ;opcode FFF9
+2  *2    9008            dw       9008h ;hex constant
+3  *3    0009  start:    ld x    ;opcode 8
+4  *4    2009            add x     ;op 2
+5  *5    FFFD            dout      ;op FFFD
+6  *6    FFFB            aout      ; op FFFB
+7  *7    9000            ja  two   ;op 9
+8  *8    FFFF            halt
+9  *9    0031   x:       dw '10'       ; ‘9’ is hex 39
+A  *10   0030
+B  *11   001E   y:       dw 30
+                end   start
+C  *12   ========= end of exam.mas ===============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ two                       0           7  
+ start                     3           C  
+ x                         9           3   4  
+ y                         B          
+
+Input file   = exam.mas
+Output file  = exam.mac
+List file    = exam.lst 
+Number base  = decimal
+Label status = case sensitive

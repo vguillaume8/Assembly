@@ -1,0 +1,112 @@
+	
+			
+
+;--------------------------------
+
+
+main:		ldc string
+			sout
+			sin
+			st buffer
+
+loop:		ld 		count		; count--, When count reaches 0 the loop endds
+			sub 	@1
+			st 		count
+			jz 		exit
+
+			ldc 	buffer		; loads the string and reads each character
+			add		index
+			ldi
+			st 		temp    	; stores character to variable temp
+		
+			ld 		null		; if null, end loop, jump to exit
+			sub		temp
+			jz      exit
+
+			ld 		space 		; if space, restart loop
+			sub		temp
+			jz 		loop
+
+			call 	@num		; calls @num function
+			pop					; pops value
+			add		tot			; adds to total of values
+			st 		tot
+			dout				; prints total of values
+
+			call inc_index		; increases index
+
+			
+			ja 	loop			; restarts loop
+;--------------------------------------------------------------------
+
+inc_index:	ld 		index		; index++, Increase the index
+			add		@1
+			st 		index
+			ret
+;------------------------------------------------------------------------
+@num:		ld 		value		; value = 0
+			push				; pushes value onto the stack
+
+			add 	index
+
+			loop2:	
+
+			call 	mult		; calls mult function
+			st 		value		; stores return value
+
+			call	inc_index	; call increase index function
+			add 	index 		; moves to next character
+			ldi		
+			st 		temp		; stores in temp
+			
+			ld 		null		; if null will jump back to main loop
+			sub		temp
+			jz		return
+
+			ld 		space 		; if space will jump back to main loop
+			sub 	temp
+			jz 		return
+
+			ja		loop2		; if num will restart num
+
+			return:	ret
+;------------------------------------------------------------------------
+	
+mult:		ldc 	value
+			st 		prod
+			ldr 	d
+			jz 		ans
+			ret
+;-------------------------------------------------
+
+ans:		ld		prod
+			str 	d
+			ret
+
+
+			
+
+
+exit:		ld string2
+			sout
+			ld tot
+			dout
+			halt
+			end		main
+
+		
+;--------------------------------
+d:		dw 0
+prod:	dw 0
+tot:	dw 0
+count:  dw 10
+value:	dw 0
+@1:		dw 1
+@9:		dw 9
+string: dw "Input a string of intergers seperated by spaces: \n"
+string2:dw "This is your final value:  "
+space:	dw 32
+null:	dw '/0'
+temp: 	dw 0
+index:	dw	0
+buffer: dw 10 dup 0

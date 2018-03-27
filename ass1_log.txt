@@ -1,0 +1,1434 @@
+sim Version 6.3 Log File ass1.log
+
+Your name          = Run mod sim /r to put your name here
+Machinecode file   = ass1.mac     Size =  B9 (hex) =  185 (dec)
+Microcode file     = none         Size =  93 (hex) =  147 (dec)
+======================== Log turned on  Thu Sep 28 17:46:03 2017
+======================== Starting session ======================
+---- [T7] 0: ldc  /8 05B/ g
+  0: ldc  /8 05B/ ac=0000/005B  
+  1: sout /FFF7 / Input a string of intergers seperated by spaces: 
+
+  2: sin  /FFF6 / m[05B]>>12 4
+  3: st   /1 0AF/ m[0AF]=0000/005B  
+  4: ldc  /8 0AF/ ac=005B/00AF  
+  5: add  /2 0AE/ ac=00AF/00AF  
+  6: ldi  /F1 00/ ac=00AF/005B  
+  7: jz   /C 04A/ 
+  8: st   /1 0AD/ m[0AD]=0000/005B  
+  9: ja   /9 016/ pc=000A/0016  
+ 16: ld   /0 0AE/ ac=005B/0000  
+ 17: add  /2 059/ ac=0000/0001  
+ 18: st   /1 0AE/ m[0AE]=0000/0001  
+ 19: ja   /9 00A/ pc=001A/000A  
+  A: ld   /0 0AD/ ac=0001/005B  
+  B: sub  /3 0AB/ ac=005B/002C  
+  C: jz   /C 04A/ 
+  D: ld   /0 0AD/ ac=002C/005B  
+  E: sub  /3 0AA/ ac=005B/003B  
+  F: jz   /C 004/ 
+ 10: call /E 01E/ m[FFF]=0000/0011  pc=0011/001E  sp=0000/FFFF  
+ 1E: ld   /0 058/ ac=003B/0000  
+ 1F: push /F3 00/ m[FFE]=0000/0000  sp=FFFF/FFFE  
+ 20: ldc  /8 0AF/ ac=0000/00AF  
+ 21: ldi  /F1 00/ ac=00AF/005B  
+ 22: sub  /3 057/ ac=005B/000E  
+ 23: jz   /C 046/ 
+ 24: add  /2 0AE/ ac=000E/000F  
+ 25: ldc  /8 0AF/ ac=000F/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=0000/002B  
+ 29: call /E 037/ m[FFD]=0000/002A  pc=002A/0037  sp=FFFE/FFFD  
+ 37: ld   /0 053/ ac=002B/000A  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=000A/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/000A  
+ 3F: sub  /3 059/ ac=000A/0009  
+ 40: st   /1 053/ m[053]=000A/0009  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0009/0009  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0009/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0009  
+ 3F: sub  /3 059/ ac=0009/0008  
+ 40: st   /1 053/ m[053]=0009/0008  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0008/0008  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0008/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0008  
+ 3F: sub  /3 059/ ac=0008/0007  
+ 40: st   /1 053/ m[053]=0008/0007  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0007/0007  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0007/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0007  
+ 3F: sub  /3 059/ ac=0007/0006  
+ 40: st   /1 053/ m[053]=0007/0006  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0006/0006  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0006/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0006  
+ 3F: sub  /3 059/ ac=0006/0005  
+ 40: st   /1 053/ m[053]=0006/0005  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0005/0005  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0005/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0005  
+ 3F: sub  /3 059/ ac=0005/0004  
+ 40: st   /1 053/ m[053]=0005/0004  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0004/0004  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0004/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0004  
+ 3F: sub  /3 059/ ac=0004/0003  
+ 40: st   /1 053/ m[053]=0004/0003  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0003/0003  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0003/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0003  
+ 3F: sub  /3 059/ ac=0003/0002  
+ 40: st   /1 053/ m[053]=0003/0002  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0002/0002  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0002/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0002  
+ 3F: sub  /3 059/ ac=0002/0001  
+ 40: st   /1 053/ m[053]=0002/0001  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0001/0001  
+ 38: jz   /C 042/ 
+ 39: ld   /0 058/ ac=0001/0000  
+ 3A: st   /1 051/ m[051]=0000/0000  
+ 3B: ldr  /4 001/ ac=0000/0000  
+ 3C: add  /2 051/ ac=0000/0000  
+ 3D: st   /1 051/ m[051]=0000/0000  
+ 3E: ld   /0 053/ ac=0000/0001  
+ 3F: sub  /3 059/ ac=0001/0000  
+ 40: st   /1 053/ m[053]=0001/0000  
+ 41: ja   /9 037/ pc=0042/0037  
+ 37: ld   /0 053/ ac=0000/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FFE]=0000/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=0000/002B  
+ 2B: push /F3 00/ m[FFC]=0000/002B  sp=FFFD/FFFC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0001  
+ 1B: add  /2 059/ ac=0001/0002  
+ 1C: st   /1 0AE/ m[0AE]=0001/0002  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0002/0004  
+ 2E: ldi  /F1 00/ ac=0004/80AF  
+ 2F: st   /1 0AD/ m[0AD]=005B/80AF  
+ 30: ld   /0 0AD/ ac=80AF/80AF  
+ 31: sub  /3 0AA/ ac=80AF/808F  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=808F/80AF  
+ 34: sub  /3 0AA/ ac=80AF/808F  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=808F/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FFB]=0000/002A  pc=002A/0037  sp=FFFC/FFFB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FFC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FFA]=0000/002B  sp=FFFB/FFFA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0002  
+ 1B: add  /2 059/ ac=0002/0003  
+ 1C: st   /1 0AE/ m[0AE]=0002/0003  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0003/0006  
+ 2E: ldi  /F1 00/ ac=0006/F100  
+ 2F: st   /1 0AD/ m[0AD]=80AF/F100  
+ 30: ld   /0 0AD/ ac=F100/F100  
+ 31: sub  /3 0AA/ ac=F100/F0E0  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=F0E0/F100  
+ 34: sub  /3 0AA/ ac=F100/F0E0  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=F0E0/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FF9]=0000/002A  pc=002A/0037  sp=FFFA/FFF9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FFA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FF8]=0000/002B  sp=FFF9/FFF8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0003  
+ 1B: add  /2 059/ ac=0003/0004  
+ 1C: st   /1 0AE/ m[0AE]=0003/0004  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0004/0008  
+ 2E: ldi  /F1 00/ ac=0008/10AD  
+ 2F: st   /1 0AD/ m[0AD]=F100/10AD  
+ 30: ld   /0 0AD/ ac=10AD/10AD  
+ 31: sub  /3 0AA/ ac=10AD/108D  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=108D/10AD  
+ 34: sub  /3 0AA/ ac=10AD/108D  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=108D/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FF7]=0000/002A  pc=002A/0037  sp=FFF8/FFF7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FF8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FF6]=0000/002B  sp=FFF7/FFF6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0004  
+ 1B: add  /2 059/ ac=0004/0005  
+ 1C: st   /1 0AE/ m[0AE]=0004/0005  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0005/000A  
+ 2E: ldi  /F1 00/ ac=000A/00AD  
+ 2F: st   /1 0AD/ m[0AD]=10AD/00AD  
+ 30: ld   /0 0AD/ ac=00AD/00AD  
+ 31: sub  /3 0AA/ ac=00AD/008D  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=008D/00AD  
+ 34: sub  /3 0AA/ ac=00AD/008D  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=008D/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FF5]=0000/002A  pc=002A/0037  sp=FFF6/FFF5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FF6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FF4]=0000/002B  sp=FFF5/FFF4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0005  
+ 1B: add  /2 059/ ac=0005/0006  
+ 1C: st   /1 0AE/ m[0AE]=0005/0006  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0006/000C  
+ 2E: ldi  /F1 00/ ac=000C/C04A  
+ 2F: st   /1 0AD/ m[0AD]=00AD/C04A  
+ 30: ld   /0 0AD/ ac=C04A/C04A  
+ 31: sub  /3 0AA/ ac=C04A/C02A  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=C02A/C04A  
+ 34: sub  /3 0AA/ ac=C04A/C02A  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=C02A/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FF3]=0000/002A  pc=002A/0037  sp=FFF4/FFF3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FF4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FF2]=0000/002B  sp=FFF3/FFF2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0006  
+ 1B: add  /2 059/ ac=0006/0007  
+ 1C: st   /1 0AE/ m[0AE]=0006/0007  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0007/000E  
+ 2E: ldi  /F1 00/ ac=000E/30AA  
+ 2F: st   /1 0AD/ m[0AD]=C04A/30AA  
+ 30: ld   /0 0AD/ ac=30AA/30AA  
+ 31: sub  /3 0AA/ ac=30AA/308A  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=308A/30AA  
+ 34: sub  /3 0AA/ ac=30AA/308A  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=308A/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FF1]=0000/002A  pc=002A/0037  sp=FFF2/FFF1  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FF2]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FF0]=0000/002B  sp=FFF1/FFF0  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0007  
+ 1B: add  /2 059/ ac=0007/0008  
+ 1C: st   /1 0AE/ m[0AE]=0007/0008  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0008/0010  
+ 2E: ldi  /F1 00/ ac=0010/E01E  
+ 2F: st   /1 0AD/ m[0AD]=30AA/E01E  
+ 30: ld   /0 0AD/ ac=E01E/E01E  
+ 31: sub  /3 0AA/ ac=E01E/DFFE  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=DFFE/E01E  
+ 34: sub  /3 0AA/ ac=E01E/DFFE  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=DFFE/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FEF]=0000/002A  pc=002A/0037  sp=FFF0/FFEF  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FF0]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FEE]=0000/002B  sp=FFEF/FFEE  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0008  
+ 1B: add  /2 059/ ac=0008/0009  
+ 1C: st   /1 0AE/ m[0AE]=0008/0009  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0009/0012  
+ 2E: ldi  /F1 00/ ac=0012/2056  
+ 2F: st   /1 0AD/ m[0AD]=E01E/2056  
+ 30: ld   /0 0AD/ ac=2056/2056  
+ 31: sub  /3 0AA/ ac=2056/2036  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=2036/2056  
+ 34: sub  /3 0AA/ ac=2056/2036  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=2036/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FED]=0000/002A  pc=002A/0037  sp=FFEE/FFED  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FEE]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FEC]=0000/002B  sp=FFED/FFEC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0009  
+ 1B: add  /2 059/ ac=0009/000A  
+ 1C: st   /1 0AE/ m[0AE]=0009/000A  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000A/0014  
+ 2E: ldi  /F1 00/ ac=0014/FFFD  
+ 2F: st   /1 0AD/ m[0AD]=2056/FFFD  
+ 30: ld   /0 0AD/ ac=FFFD/FFFD  
+ 31: sub  /3 0AA/ ac=FFFD/FFDD  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFDD/FFFD  
+ 34: sub  /3 0AA/ ac=FFFD/FFDD  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFDD/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FEB]=0000/002A  pc=002A/0037  sp=FFEC/FFEB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FEC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FEA]=0000/002B  sp=FFEB/FFEA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000A  
+ 1B: add  /2 059/ ac=000A/000B  
+ 1C: st   /1 0AE/ m[0AE]=000A/000B  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000B/0016  
+ 2E: ldi  /F1 00/ ac=0016/00AE  
+ 2F: st   /1 0AD/ m[0AD]=FFFD/00AE  
+ 30: ld   /0 0AD/ ac=00AE/00AE  
+ 31: sub  /3 0AA/ ac=00AE/008E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=008E/00AE  
+ 34: sub  /3 0AA/ ac=00AE/008E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=008E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FE9]=0000/002A  pc=002A/0037  sp=FFEA/FFE9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FEA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FE8]=0000/002B  sp=FFE9/FFE8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000B  
+ 1B: add  /2 059/ ac=000B/000C  
+ 1C: st   /1 0AE/ m[0AE]=000B/000C  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000C/0018  
+ 2E: ldi  /F1 00/ ac=0018/10AE  
+ 2F: st   /1 0AD/ m[0AD]=00AE/10AE  
+ 30: ld   /0 0AD/ ac=10AE/10AE  
+ 31: sub  /3 0AA/ ac=10AE/108E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=108E/10AE  
+ 34: sub  /3 0AA/ ac=10AE/108E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=108E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FE7]=0000/002A  pc=002A/0037  sp=FFE8/FFE7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FE8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FE6]=0000/002B  sp=FFE7/FFE6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000C  
+ 1B: add  /2 059/ ac=000C/000D  
+ 1C: st   /1 0AE/ m[0AE]=000C/000D  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000D/001A  
+ 2E: ldi  /F1 00/ ac=001A/00AE  
+ 2F: st   /1 0AD/ m[0AD]=10AE/00AE  
+ 30: ld   /0 0AD/ ac=00AE/00AE  
+ 31: sub  /3 0AA/ ac=00AE/008E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=008E/00AE  
+ 34: sub  /3 0AA/ ac=00AE/008E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=008E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FE5]=0000/002A  pc=002A/0037  sp=FFE6/FFE5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FE6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FE4]=0000/002B  sp=FFE5/FFE4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000D  
+ 1B: add  /2 059/ ac=000D/000E  
+ 1C: st   /1 0AE/ m[0AE]=000D/000E  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000E/001C  
+ 2E: ldi  /F1 00/ ac=001C/10AE  
+ 2F: st   /1 0AD/ m[0AD]=00AE/10AE  
+ 30: ld   /0 0AD/ ac=10AE/10AE  
+ 31: sub  /3 0AA/ ac=10AE/108E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=108E/10AE  
+ 34: sub  /3 0AA/ ac=10AE/108E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=108E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FE3]=0000/002A  pc=002A/0037  sp=FFE4/FFE3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FE4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FE2]=0000/002B  sp=FFE3/FFE2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000E  
+ 1B: add  /2 059/ ac=000E/000F  
+ 1C: st   /1 0AE/ m[0AE]=000E/000F  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=000F/001E  
+ 2E: ldi  /F1 00/ ac=001E/0058  
+ 2F: st   /1 0AD/ m[0AD]=10AE/0058  
+ 30: ld   /0 0AD/ ac=0058/0058  
+ 31: sub  /3 0AA/ ac=0058/0038  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0038/0058  
+ 34: sub  /3 0AA/ ac=0058/0038  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0038/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FE1]=0000/002A  pc=002A/0037  sp=FFE2/FFE1  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FE2]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FE0]=0000/002B  sp=FFE1/FFE0  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/000F  
+ 1B: add  /2 059/ ac=000F/0010  
+ 1C: st   /1 0AE/ m[0AE]=000F/0010  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0010/0020  
+ 2E: ldi  /F1 00/ ac=0020/80AF  
+ 2F: st   /1 0AD/ m[0AD]=0058/80AF  
+ 30: ld   /0 0AD/ ac=80AF/80AF  
+ 31: sub  /3 0AA/ ac=80AF/808F  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=808F/80AF  
+ 34: sub  /3 0AA/ ac=80AF/808F  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=808F/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FDF]=0000/002A  pc=002A/0037  sp=FFE0/FFDF  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FE0]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FDE]=0000/002B  sp=FFDF/FFDE  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0010  
+ 1B: add  /2 059/ ac=0010/0011  
+ 1C: st   /1 0AE/ m[0AE]=0010/0011  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0011/0022  
+ 2E: ldi  /F1 00/ ac=0022/3057  
+ 2F: st   /1 0AD/ m[0AD]=80AF/3057  
+ 30: ld   /0 0AD/ ac=3057/3057  
+ 31: sub  /3 0AA/ ac=3057/3037  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=3037/3057  
+ 34: sub  /3 0AA/ ac=3057/3037  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=3037/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FDD]=0000/002A  pc=002A/0037  sp=FFDE/FFDD  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FDE]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FDC]=0000/002B  sp=FFDD/FFDC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0011  
+ 1B: add  /2 059/ ac=0011/0012  
+ 1C: st   /1 0AE/ m[0AE]=0011/0012  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0012/0024  
+ 2E: ldi  /F1 00/ ac=0024/20AE  
+ 2F: st   /1 0AD/ m[0AD]=3057/20AE  
+ 30: ld   /0 0AD/ ac=20AE/20AE  
+ 31: sub  /3 0AA/ ac=20AE/208E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=208E/20AE  
+ 34: sub  /3 0AA/ ac=20AE/208E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=208E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FDB]=0000/002A  pc=002A/0037  sp=FFDC/FFDB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FDC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FDA]=0000/002B  sp=FFDB/FFDA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0012  
+ 1B: add  /2 059/ ac=0012/0013  
+ 1C: st   /1 0AE/ m[0AE]=0012/0013  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0013/0026  
+ 2E: ldi  /F1 00/ ac=0026/F100  
+ 2F: st   /1 0AD/ m[0AD]=20AE/F100  
+ 30: ld   /0 0AD/ ac=F100/F100  
+ 31: sub  /3 0AA/ ac=F100/F0E0  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=F0E0/F100  
+ 34: sub  /3 0AA/ ac=F100/F0E0  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=F0E0/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FD9]=0000/002A  pc=002A/0037  sp=FFDA/FFD9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FDA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FD8]=0000/002B  sp=FFD9/FFD8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0013  
+ 1B: add  /2 059/ ac=0013/0014  
+ 1C: st   /1 0AE/ m[0AE]=0013/0014  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0014/0028  
+ 2E: ldi  /F1 00/ ac=0028/104F  
+ 2F: st   /1 0AD/ m[0AD]=F100/104F  
+ 30: ld   /0 0AD/ ac=104F/104F  
+ 31: sub  /3 0AA/ ac=104F/102F  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=102F/104F  
+ 34: sub  /3 0AA/ ac=104F/102F  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=102F/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FD7]=0000/002A  pc=002A/0037  sp=FFD8/FFD7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FD8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FD6]=0000/002B  sp=FFD7/FFD6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0014  
+ 1B: add  /2 059/ ac=0014/0015  
+ 1C: st   /1 0AE/ m[0AE]=0014/0015  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0015/002A  
+ 2E: ldi  /F1 00/ ac=002A/1058  
+ 2F: st   /1 0AD/ m[0AD]=104F/1058  
+ 30: ld   /0 0AD/ ac=1058/1058  
+ 31: sub  /3 0AA/ ac=1058/1038  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=1038/1058  
+ 34: sub  /3 0AA/ ac=1058/1038  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=1038/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FD5]=0000/002A  pc=002A/0037  sp=FFD6/FFD5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FD6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FD4]=0000/002B  sp=FFD5/FFD4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0015  
+ 1B: add  /2 059/ ac=0015/0016  
+ 1C: st   /1 0AE/ m[0AE]=0015/0016  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0016/002C  
+ 2E: ldi  /F1 00/ ac=002C/901A  
+ 2F: st   /1 0AD/ m[0AD]=1058/901A  
+ 30: ld   /0 0AD/ ac=901A/901A  
+ 31: sub  /3 0AA/ ac=901A/8FFA  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=8FFA/901A  
+ 34: sub  /3 0AA/ ac=901A/8FFA  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=8FFA/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FD3]=0000/002A  pc=002A/0037  sp=FFD4/FFD3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FD4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FD2]=0000/002B  sp=FFD3/FFD2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0016  
+ 1B: add  /2 059/ ac=0016/0017  
+ 1C: st   /1 0AE/ m[0AE]=0016/0017  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0017/002E  
+ 2E: ldi  /F1 00/ ac=002E/F100  
+ 2F: st   /1 0AD/ m[0AD]=901A/F100  
+ 30: ld   /0 0AD/ ac=F100/F100  
+ 31: sub  /3 0AA/ ac=F100/F0E0  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=F0E0/F100  
+ 34: sub  /3 0AA/ ac=F100/F0E0  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=F0E0/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FD1]=0000/002A  pc=002A/0037  sp=FFD2/FFD1  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FD2]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FD0]=0000/002B  sp=FFD1/FFD0  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0017  
+ 1B: add  /2 059/ ac=0017/0018  
+ 1C: st   /1 0AE/ m[0AE]=0017/0018  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0018/0030  
+ 2E: ldi  /F1 00/ ac=0030/00AD  
+ 2F: st   /1 0AD/ m[0AD]=F100/00AD  
+ 30: ld   /0 0AD/ ac=00AD/00AD  
+ 31: sub  /3 0AA/ ac=00AD/008D  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=008D/00AD  
+ 34: sub  /3 0AA/ ac=00AD/008D  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=008D/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FCF]=0000/002A  pc=002A/0037  sp=FFD0/FFCF  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FD0]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FCE]=0000/002B  sp=FFCF/FFCE  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0018  
+ 1B: add  /2 059/ ac=0018/0019  
+ 1C: st   /1 0AE/ m[0AE]=0018/0019  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0019/0032  
+ 2E: ldi  /F1 00/ ac=0032/C011  
+ 2F: st   /1 0AD/ m[0AD]=00AD/C011  
+ 30: ld   /0 0AD/ ac=C011/C011  
+ 31: sub  /3 0AA/ ac=C011/BFF1  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=BFF1/C011  
+ 34: sub  /3 0AA/ ac=C011/BFF1  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=BFF1/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FCD]=0000/002A  pc=002A/0037  sp=FFCE/FFCD  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FCE]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FCC]=0000/002B  sp=FFCD/FFCC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0019  
+ 1B: add  /2 059/ ac=0019/001A  
+ 1C: st   /1 0AE/ m[0AE]=0019/001A  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001A/0034  
+ 2E: ldi  /F1 00/ ac=0034/30AA  
+ 2F: st   /1 0AD/ m[0AD]=C011/30AA  
+ 30: ld   /0 0AD/ ac=30AA/30AA  
+ 31: sub  /3 0AA/ ac=30AA/308A  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=308A/30AA  
+ 34: sub  /3 0AA/ ac=30AA/308A  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=308A/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FCB]=0000/002A  pc=002A/0037  sp=FFCC/FFCB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FCC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FCA]=0000/002B  sp=FFCB/FFCA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001A  
+ 1B: add  /2 059/ ac=001A/001B  
+ 1C: st   /1 0AE/ m[0AE]=001A/001B  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001B/0036  
+ 2E: ldi  /F1 00/ ac=0036/9025  
+ 2F: st   /1 0AD/ m[0AD]=30AA/9025  
+ 30: ld   /0 0AD/ ac=9025/9025  
+ 31: sub  /3 0AA/ ac=9025/9005  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=9005/9025  
+ 34: sub  /3 0AA/ ac=9025/9005  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=9005/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FC9]=0000/002A  pc=002A/0037  sp=FFCA/FFC9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FCA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FC8]=0000/002B  sp=FFC9/FFC8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001B  
+ 1B: add  /2 059/ ac=001B/001C  
+ 1C: st   /1 0AE/ m[0AE]=001B/001C  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001C/0038  
+ 2E: ldi  /F1 00/ ac=0038/C042  
+ 2F: st   /1 0AD/ m[0AD]=9025/C042  
+ 30: ld   /0 0AD/ ac=C042/C042  
+ 31: sub  /3 0AA/ ac=C042/C022  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=C022/C042  
+ 34: sub  /3 0AA/ ac=C042/C022  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=C022/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FC7]=0000/002A  pc=002A/0037  sp=FFC8/FFC7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FC8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FC6]=0000/002B  sp=FFC7/FFC6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001C  
+ 1B: add  /2 059/ ac=001C/001D  
+ 1C: st   /1 0AE/ m[0AE]=001C/001D  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001D/003A  
+ 2E: ldi  /F1 00/ ac=003A/1051  
+ 2F: st   /1 0AD/ m[0AD]=C042/1051  
+ 30: ld   /0 0AD/ ac=1051/1051  
+ 31: sub  /3 0AA/ ac=1051/1031  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=1031/1051  
+ 34: sub  /3 0AA/ ac=1051/1031  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=1031/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FC5]=0000/002A  pc=002A/0037  sp=FFC6/FFC5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FC6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FC4]=0000/002B  sp=FFC5/FFC4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001D  
+ 1B: add  /2 059/ ac=001D/001E  
+ 1C: st   /1 0AE/ m[0AE]=001D/001E  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001E/003C  
+ 2E: ldi  /F1 00/ ac=003C/2051  
+ 2F: st   /1 0AD/ m[0AD]=1051/2051  
+ 30: ld   /0 0AD/ ac=2051/2051  
+ 31: sub  /3 0AA/ ac=2051/2031  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=2031/2051  
+ 34: sub  /3 0AA/ ac=2051/2031  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=2031/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FC3]=0000/002A  pc=002A/0037  sp=FFC4/FFC3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FC4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FC2]=0000/002B  sp=FFC3/FFC2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001E  
+ 1B: add  /2 059/ ac=001E/001F  
+ 1C: st   /1 0AE/ m[0AE]=001E/001F  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=001F/003E  
+ 2E: ldi  /F1 00/ ac=003E/0053  
+ 2F: st   /1 0AD/ m[0AD]=2051/0053  
+ 30: ld   /0 0AD/ ac=0053/0053  
+ 31: sub  /3 0AA/ ac=0053/0033  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0033/0053  
+ 34: sub  /3 0AA/ ac=0053/0033  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0033/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FC1]=0000/002A  pc=002A/0037  sp=FFC2/FFC1  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FC2]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FC0]=0000/002B  sp=FFC1/FFC0  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/001F  
+ 1B: add  /2 059/ ac=001F/0020  
+ 1C: st   /1 0AE/ m[0AE]=001F/0020  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0020/0040  
+ 2E: ldi  /F1 00/ ac=0040/1053  
+ 2F: st   /1 0AD/ m[0AD]=0053/1053  
+ 30: ld   /0 0AD/ ac=1053/1053  
+ 31: sub  /3 0AA/ ac=1053/1033  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=1033/1053  
+ 34: sub  /3 0AA/ ac=1053/1033  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=1033/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FBF]=0000/002A  pc=002A/0037  sp=FFC0/FFBF  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FC0]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FBE]=0000/002B  sp=FFBF/FFBE  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0020  
+ 1B: add  /2 059/ ac=0020/0021  
+ 1C: st   /1 0AE/ m[0AE]=0020/0021  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0021/0042  
+ 2E: ldi  /F1 00/ ac=0042/0051  
+ 2F: st   /1 0AD/ m[0AD]=1053/0051  
+ 30: ld   /0 0AD/ ac=0051/0051  
+ 31: sub  /3 0AA/ ac=0051/0031  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0031/0051  
+ 34: sub  /3 0AA/ ac=0051/0031  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0031/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FBD]=0000/002A  pc=002A/0037  sp=FFBE/FFBD  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FBE]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FBC]=0000/002B  sp=FFBD/FFBC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0021  
+ 1B: add  /2 059/ ac=0021/0022  
+ 1C: st   /1 0AE/ m[0AE]=0021/0022  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0022/0044  
+ 2E: ldi  /F1 00/ ac=0044/5001  
+ 2F: st   /1 0AD/ m[0AD]=0051/5001  
+ 30: ld   /0 0AD/ ac=5001/5001  
+ 31: sub  /3 0AA/ ac=5001/4FE1  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=4FE1/5001  
+ 34: sub  /3 0AA/ ac=5001/4FE1  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=4FE1/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FBB]=0000/002A  pc=002A/0037  sp=FFBC/FFBB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FBC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FBA]=0000/002B  sp=FFBB/FFBA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0022  
+ 1B: add  /2 059/ ac=0022/0023  
+ 1C: st   /1 0AE/ m[0AE]=0022/0023  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0023/0046  
+ 2E: ldi  /F1 00/ ac=0046/0055  
+ 2F: st   /1 0AD/ m[0AD]=5001/0055  
+ 30: ld   /0 0AD/ ac=0055/0055  
+ 31: sub  /3 0AA/ ac=0055/0035  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0035/0055  
+ 34: sub  /3 0AA/ ac=0055/0035  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0035/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FB9]=0000/002A  pc=002A/0037  sp=FFBA/FFB9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FBA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FB8]=0000/002B  sp=FFB9/FFB8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0023  
+ 1B: add  /2 059/ ac=0023/0024  
+ 1C: st   /1 0AE/ m[0AE]=0023/0024  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0024/0048  
+ 2E: ldi  /F1 00/ ac=0048/1055  
+ 2F: st   /1 0AD/ m[0AD]=0055/1055  
+ 30: ld   /0 0AD/ ac=1055/1055  
+ 31: sub  /3 0AA/ ac=1055/1035  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=1035/1055  
+ 34: sub  /3 0AA/ ac=1055/1035  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=1035/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FB7]=0000/002A  pc=002A/0037  sp=FFB8/FFB7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FB8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FB6]=0000/002B  sp=FFB7/FFB6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0024  
+ 1B: add  /2 059/ ac=0024/0025  
+ 1C: st   /1 0AE/ m[0AE]=0024/0025  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0025/004A  
+ 2E: ldi  /F1 00/ ac=004A/808E  
+ 2F: st   /1 0AD/ m[0AD]=1055/808E  
+ 30: ld   /0 0AD/ ac=808E/808E  
+ 31: sub  /3 0AA/ ac=808E/806E  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=806E/808E  
+ 34: sub  /3 0AA/ ac=808E/806E  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=806E/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FB5]=0000/002A  pc=002A/0037  sp=FFB6/FFB5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FB6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FB4]=0000/002B  sp=FFB5/FFB4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0025  
+ 1B: add  /2 059/ ac=0025/0026  
+ 1C: st   /1 0AE/ m[0AE]=0025/0026  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0026/004C  
+ 2E: ldi  /F1 00/ ac=004C/0056  
+ 2F: st   /1 0AD/ m[0AD]=808E/0056  
+ 30: ld   /0 0AD/ ac=0056/0056  
+ 31: sub  /3 0AA/ ac=0056/0036  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0036/0056  
+ 34: sub  /3 0AA/ ac=0056/0036  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0036/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FB3]=0000/002A  pc=002A/0037  sp=FFB4/FFB3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FB4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FB2]=0000/002B  sp=FFB3/FFB2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0026  
+ 1B: add  /2 059/ ac=0026/0027  
+ 1C: st   /1 0AE/ m[0AE]=0026/0027  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0027/004E  
+ 2E: ldi  /F1 00/ ac=004E/FFFF  
+ 2F: st   /1 0AD/ m[0AD]=0056/FFFF  
+ 30: ld   /0 0AD/ ac=FFFF/FFFF  
+ 31: sub  /3 0AA/ ac=FFFF/FFDF  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFDF/FFFF  
+ 34: sub  /3 0AA/ ac=FFFF/FFDF  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFDF/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FB1]=0000/002A  pc=002A/0037  sp=FFB2/FFB1  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FB2]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FB0]=0000/002B  sp=FFB1/FFB0  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0027  
+ 1B: add  /2 059/ ac=0027/0028  
+ 1C: st   /1 0AE/ m[0AE]=0027/0028  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0028/0050  
+ 2E: ldi  /F1 00/ ac=0050/0002  
+ 2F: st   /1 0AD/ m[0AD]=FFFF/0002  
+ 30: ld   /0 0AD/ ac=0002/0002  
+ 31: sub  /3 0AA/ ac=0002/FFE2  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFE2/0002  
+ 34: sub  /3 0AA/ ac=0002/FFE2  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFE2/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FAF]=0000/002A  pc=002A/0037  sp=FFB0/FFAF  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FB0]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FAE]=0000/002B  sp=FFAF/FFAE  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0028  
+ 1B: add  /2 059/ ac=0028/0029  
+ 1C: st   /1 0AE/ m[0AE]=0028/0029  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=0029/0052  
+ 2E: ldi  /F1 00/ ac=0052/0000  
+ 2F: st   /1 0AD/ m[0AD]=0002/0000  
+ 30: ld   /0 0AD/ ac=0000/0000  
+ 31: sub  /3 0AA/ ac=0000/FFE0  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFE0/0000  
+ 34: sub  /3 0AA/ ac=0000/FFE0  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFE0/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FAD]=0000/002A  pc=002A/0037  sp=FFAE/FFAD  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FAE]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FAC]=0000/002B  sp=FFAD/FFAC  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/0029  
+ 1B: add  /2 059/ ac=0029/002A  
+ 1C: st   /1 0AE/ m[0AE]=0029/002A  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002A/0054  
+ 2E: ldi  /F1 00/ ac=0054/0030  
+ 2F: st   /1 0AD/ m[0AD]=0000/0030  
+ 30: ld   /0 0AD/ ac=0030/0030  
+ 31: sub  /3 0AA/ ac=0030/0010  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0010/0030  
+ 34: sub  /3 0AA/ ac=0030/0010  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0010/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FAB]=0000/002A  pc=002A/0037  sp=FFAC/FFAB  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FAC]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FAA]=0000/002B  sp=FFAB/FFAA  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/002A  
+ 1B: add  /2 059/ ac=002A/002B  
+ 1C: st   /1 0AE/ m[0AE]=002A/002B  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002B/0056  
+ 2E: ldi  /F1 00/ ac=0056/0000  
+ 2F: st   /1 0AD/ m[0AD]=0030/0000  
+ 30: ld   /0 0AD/ ac=0000/0000  
+ 31: sub  /3 0AA/ ac=0000/FFE0  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFE0/0000  
+ 34: sub  /3 0AA/ ac=0000/FFE0  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFE0/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FA9]=0000/002A  pc=002A/0037  sp=FFAA/FFA9  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FAA]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FA8]=0000/002B  sp=FFA9/FFA8  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/002B  
+ 1B: add  /2 059/ ac=002B/002C  
+ 1C: st   /1 0AE/ m[0AE]=002B/002C  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002C/0058  
+ 2E: ldi  /F1 00/ ac=0058/002B  
+ 2F: st   /1 0AD/ m[0AD]=0000/002B  
+ 30: ld   /0 0AD/ ac=002B/002B  
+ 31: sub  /3 0AA/ ac=002B/000B  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=000B/002B  
+ 34: sub  /3 0AA/ ac=002B/000B  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=000B/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FA7]=0000/002A  pc=002A/0037  sp=FFA8/FFA7  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FA8]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FA6]=0000/002B  sp=FFA7/FFA6  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/002C  
+ 1B: add  /2 059/ ac=002C/002D  
+ 1C: st   /1 0AE/ m[0AE]=002C/002D  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002D/005A  
+ 2E: ldi  /F1 00/ ac=005A/000A  
+ 2F: st   /1 0AD/ m[0AD]=002B/000A  
+ 30: ld   /0 0AD/ ac=000A/000A  
+ 31: sub  /3 0AA/ ac=000A/FFEA  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=FFEA/000A  
+ 34: sub  /3 0AA/ ac=000A/FFEA  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=FFEA/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FA5]=0000/002A  pc=002A/0037  sp=FFA6/FFA5  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FA6]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FA4]=0000/002B  sp=FFA5/FFA4  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/002D  
+ 1B: add  /2 059/ ac=002D/002E  
+ 1C: st   /1 0AE/ m[0AE]=002D/002E  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002E/005C  
+ 2E: ldi  /F1 00/ ac=005C/0032  
+ 2F: st   /1 0AD/ m[0AD]=000A/0032  
+ 30: ld   /0 0AD/ ac=0032/0032  
+ 31: sub  /3 0AA/ ac=0032/0012  
+ 32: jz   /C 011/ 
+ 33: ld   /0 0AD/ ac=0012/0032  
+ 34: sub  /3 0AA/ ac=0032/0012  
+ 35: jz   /C 011/ 
+ 36: ja   /9 025/ pc=0037/0025  
+ 25: ldc  /8 0AF/ ac=0012/00AF  
+ 26: ldi  /F1 00/ ac=00AF/005B  
+ 27: sub  /3 054/ ac=005B/002B  
+ 28: st   /1 04F/ m[04F]=002B/002B  
+ 29: call /E 037/ m[FA3]=0000/002A  pc=002A/0037  sp=FFA4/FFA3  
+ 37: ld   /0 053/ ac=002B/0000  
+ 38: jz   /C 042/ pc=0039/0042  
+ 42: ld   /0 051/ ac=0000/0000  
+ 43: add  /2 04F/ ac=0000/002B  
+ 44: str  /5 001/ m[FA4]=002B/002B  
+ 45: ja   /9 02A/ pc=0046/002A  
+ 2A: st   /1 058/ m[058]=002B/002B  
+ 2B: push /F3 00/ m[FA2]=0000/002B  sp=FFA3/FFA2  
+ 2C: ja   /9 01A/ pc=002D/001A  
+ 1A: ld   /0 0AE/ ac=002B/002E  
+ 1B: add  /2 059/ ac=002E/002F  
+ 1C: st   /1 0AE/ m[0AE]=002E/002F  
+ 1D: ja   /9 02D/ pc=001E/002D  
+ 2D: add  /2 0AE/ ac=002F/005E  
+ 2E: ldi  /F1 00/ ac=005E/0034  
+  7: jz   /C 04A/ pc=0008/004A
+ 4A: ldc  /8 08E/ ac=0034/008E
+ 4B: sout /FFF7 / This is your final value:
+ 4C: ld   /0 056/ ac=008E/002B
+ 4D: dout /FFFD / 43
+ 4E:halt  /FFFF /
+ 

@@ -1,0 +1,56 @@
+Machine-level Assembler Version 6.3    Wed Sep 13 19:04:03 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    0006  xx:		dw 6
+1  *1    0007  yy:		dw 7
+2  *2    0001  start:	ld yy
+3  *3    F300  		push
+4  *4    0000  		ld xx
+5  *5    F300  		push
+6  *6    E00B  		call mult
+7  *7    F400  rtn:	pop
+8  *8    FFFD  		dout
+9  *9    F400  		pop	
+A  *10   FFFF  		halt
+B  *11   8000  mult:	ldc 0
+C  *12   101A  		st prod
+D  *13   4001  		ldr 1
+E  *14   C016  		jz ans
+F  *15   001A  loop:	ld prod
+10 *16   6002  		addr 2
+11 *17   101A  		st prod
+12 *18   4001  		ldr 1
+13 *19   3019  		sub one
+14 *20   5001  		str 1
+15 *21   D00F  		jnz loop
+16 *22   001A  ans:	ld prod
+17 *23   5001  		str 1
+18 *24   F000  		ret
+19 *25   0001  one:	dw 1
+1A *26   0000  prod:	dw 0
+               		end start
+1B *27   ========= end of mult.mas ===============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ xx                        0           4  
+ yy                        1           2  
+ start                     2           1B 
+ rtn                       7          
+ mult                      B           6  
+ loop                      F           15 
+ ans                       16          E  
+ one                       19          13 
+ prod                      1A          C   F   11  16 
+
+Input file   = mult.mas
+Output file  = mult.mac
+List file    = mult.lst 
+Number base  = decimal
+Label status = case sensitive

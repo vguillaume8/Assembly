@@ -1,0 +1,72 @@
+Machine-level Assembler Version 6.3    Wed Sep 13 21:02:48 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    8012  		ldc string   ;reads in a decimal number and displays its value
+1  *1    FFF7  		sout
+2  *2    FFFC  		din
+3  *3    1024  		st n1
+4  *4    8000  mult:   ldc 0
+5  *5    1025  		st result
+               
+6  *6    0026  loop:	ld count
+7  *7    C00F  		jz exit
+8  *8    0025  		ld result
+9  *9    2024  		add n1
+A  *10   1025  		st result
+B  *11   0026  		ld count
+C  *12   3027  		sub one
+D  *13   1026  		st count
+E  *14   9006  		ja loop
+               
+F  *15   0025  exit:   ld result
+10 *16   FFFD  		dout
+11 *17   FFFF  		halt
+               		
+               
+12 *18   0049  string: dw "Input a decimal: "
+13 *19   006E
+14 *20   0070
+15 *21   0075
+16 *22   0074
+17 *23   0020
+18 *24   0061
+19 *25   0020
+1A *26   0064
+1B *27   0065
+1C *28   0063
+1D *29   0069
+1E *30   006D
+1F *31   0061
+20 *32   006C
+21 *33   003A
+22 *34   0020
+23 *35   0000
+               
+24 *36   0002  n1:     dw 2
+25 *37   0008  result: dw 8
+26 *38   0007  count: 	dw 7
+27 *39   0001  one:    dw 1
+28 *40   ========= end of mult7.mas ==============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ mult                      4          
+ loop                      6           E  
+ exit                      F           7  
+ string                    12          0  
+ n1                        24          3   9  
+ result                    25          5   8   A   F  
+ count                     26          6   B   D  
+ one                       27          C  
+
+Input file   = mult7.mas
+Output file  = mult7.mac
+List file    = mult7.lst 
+Number base  = decimal
+Label status = case sensitive

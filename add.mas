@@ -1,0 +1,6 @@
+		ld 4
+		add -35
+		add 16
+		add 555
+		add	-8
+		st 5

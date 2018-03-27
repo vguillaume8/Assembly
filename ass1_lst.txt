@@ -1,0 +1,272 @@
+Machine-level Assembler Version 6.3    Thu Sep 28 17:45:54 2017
+
+  LOC    OBJ   SOURCE
+hex*dec
+
+0  *0    805B  main:		ldc 	string
+1  *1    FFF7  			sout
+               			;ldc 	buffer
+2  *2    FFF6  			sin
+3  *3    10AF  			st 		buffer
+               
+               loop:		
+4  *4    80AF  			ldc 	buffer		; loads the string and reads each character
+5  *5    20AE  			add		index
+6  *6    F100  			ldi
+7  *7    C04A  			jz		exit
+8  *8    10AD  			st 		temp    	; stores character to variable temp
+               			
+9  *9    9016  			ja		inc_index	; increases index
+               
+A  *10   00AD  ret_ind:	ld      temp
+B  *11   30AB  			sub		null		; if null, end loop, jump to exit
+C  *12   C04A  			jz      exit
+               
+D  *13   00AD  			ld      temp
+E  *14   30AA  			sub		space		; if space, restart loop
+F  *15   C004  			jz 		loop
+               			;st 		temp
+               
+10 *16   E01E  			call 	@num		; calls @num function
+11 *17   F400  return:		pop					; pops value
+12 *18   2056  			add		tot			; adds to total of values
+13 *19   1056  			st 		tot
+14 *20   FFFD  			dout				; prints total of values
+               
+15 *21   9004  			ja 		loop		; restarts loop
+               ;---------------------------------------------------------------
+16 *22   00AE  inc_index:	ld 		index		; index++, Increase the index
+17 *23   2059  			add		@1
+18 *24   10AE  			st 		index
+19 *25   900A  			ja		ret_ind
+               ;---------------------------------------------------------------
+1A *26   00AE  inc_index2:	ld 		index		; index++, Increase the index
+1B *27   2059  			add		@1
+1C *28   10AE  			st 		index
+1D *29   902D  			ja		return2
+               
+               
+               
+               ;---------------------------------------------------------------
+1E *30   0058  @num:		ld 		value		; value = 0
+1F *31   F300  			push				; pushes value onto the stack
+               
+20 *32   80AF  			ldc 	buffer		; for negative numbers
+21 *33   F100  			ldi	
+22 *34   3057  			sub		minus
+23 *35   C046  			jz		setflag
+24 *36   20AE  loc_neg:	add 	index
+               
+               
+               loop2:							; Converts Ascii to Binary	
+               
+25 *37   80AF  			ldc 	buffer
+26 *38   F100  			ldi
+27 *39   3054  			sub 	bin
+28 *40   104F  			st 		d
+               
+               
+29 *41   E037  			call 	mult		; calls mult function
+2A *42   1058  ret_mult:	st 		value		; stores return value
+2B *43   F300  			push
+               
+2C *44   901A  			ja  	inc_index2	; call increase index function
+2D *45   20AE  return2:	add 	index 		; moves to next character
+2E *46   F100  			ldi		
+2F *47   10AD  			st 		temp		; stores in temp
+               			
+30 *48   00AD  			ld 		temp		; if null will jump back to main loop
+31 *49   30AA  			sub		space
+32 *50   C011  			jz		return
+               
+33 *51   00AD  			ld 		temp		; if space will jump back to main loop
+34 *52   30AA  			sub 	space
+35 *53   C011  			jz 		return
+               
+36 *54   9025  			ja		loop2		; if num will restart num
+               			;ret
+               
+               
+               ;---------------------------------------------------------------
+37 *55   0053  mult:		ld 		count		; count is at 10
+38 *56   C042  			jz		done_mult	; goes back to mult when reaches 0
+39 *57   0058  			ld  	value
+3A *58   1051  			st 		tempprod
+3B *59   4001  			ldr     1
+3C *60   2051  			add 	tempprod
+3D *61   1051  			st      tempprod
+3E *62   0053  			ld 		count
+3F *63   3059  			sub		@1	 		; subtract 1
+40 *64   1053  			st 		count
+41 *65   9037  			ja		mult
+               ;---------------------------------------------------------------
+               
+42 *66   0051  done_mult:	ld 		tempprod	; loads temp prod
+43 *67   204F  			add     d           ; add binary number
+44 *68   5001  			str     1
+45 *69   902A  			ja		ret_mult    ; return
+               ;-------------------------------------------------
+               
+               
+46 *70   0055  setflag:	ld flag					; Add flags for negative Numbers
+47 *71   2059  			add @1
+48 *72   1055  			st flag	
+49 *73   9024  			ja loc_neg
+               ;--------------------------------------------------------
+               
+4A *74   808E  exit:		ldc 	string2
+4B *75   FFF7  			sout
+4C *76   0056  			ld 		tot
+4D *77   FFFD  			dout
+4E *78   FFFF  			halt
+               			end		main
+               
+               		
+               ;--------------------------------
+4F *79   0000  d:		dw 0
+50 *80   0002  n1:		dw 2
+51 *81   0000  tempprod: dw 0
+52 *82   0000  prod:	dw 0
+53 *83   000A  count:  dw 10
+54 *84   0030  bin: 	dw 30h
+55 *85   0000  flag:	dw 0
+56 *86   0000  tot:	dw 0
+57 *87   004D  minus:	dw 77
+58 *88   0000  value:	dw 0
+59 *89   0001  @1:		dw 1
+5A *90   000A  @10:	dw 10
+5B *91   0049  string: dw "Input a string of intergers seperated by spaces: \n"
+5C *92   006E
+5D *93   0070
+5E *94   0075
+5F *95   0074
+60 *96   0020
+61 *97   0061
+62 *98   0020
+63 *99   0073
+64 *100  0074
+65 *101  0072
+66 *102  0069
+67 *103  006E
+68 *104  0067
+69 *105  0020
+6A *106  006F
+6B *107  0066
+6C *108  0020
+6D *109  0069
+6E *110  006E
+6F *111  0074
+70 *112  0065
+71 *113  0072
+72 *114  0067
+73 *115  0065
+74 *116  0072
+75 *117  0073
+76 *118  0020
+77 *119  0073
+78 *120  0065
+79 *121  0070
+7A *122  0065
+7B *123  0072
+7C *124  0061
+7D *125  0074
+7E *126  0065
+7F *127  0064
+80 *128  0020
+81 *129  0062
+82 *130  0079
+83 *131  0020
+84 *132  0073
+85 *133  0070
+86 *134  0061
+87 *135  0063
+88 *136  0065
+89 *137  0073
+8A *138  003A
+8B *139  0020
+8C *140  000A
+8D *141  0000
+8E *142  0054  string2:dw "This is your final value:  "
+8F *143  0068
+90 *144  0069
+91 *145  0073
+92 *146  0020
+93 *147  0069
+94 *148  0073
+95 *149  0020
+96 *150  0079
+97 *151  006F
+98 *152  0075
+99 *153  0072
+9A *154  0020
+9B *155  0066
+9C *156  0069
+9D *157  006E
+9E *158  0061
+9F *159  006C
+A0 *160  0020
+A1 *161  0076
+A2 *162  0061
+A3 *163  006C
+A4 *164  0075
+A5 *165  0065
+A6 *166  003A
+A7 *167  0020
+A8 *168  0020
+A9 *169  0000
+AA *170  0020  space:	dw 32
+AB *171  002F  null:	dw '/0'
+AC *172  0030
+AD *173  0000  temp: 	dw 0
+AE *174  0000  index:	dw	0
+AF *175  0000  buffer: dw 10 dup 0
+B9 *185  ========= end of ass1.mas ===============================
+
+
+         Symbol/Cross-Reference Table
+
+Symbol                   Address     References
+                          (hex)       (hex)
+
+ main                      0           4F 
+ loop                      4           F   15 
+ ret_ind                   A           19 
+ return                    11          32  35 
+ inc_index                 16          9  
+ inc_index2                1A          2C 
+ @num                      1E          10 
+ loc_neg                   24          49 
+ loop2                     25          36 
+ ret_mult                  2A          45 
+ return2                   2D          1D 
+ mult                      37          29  41 
+ done_mult                 42          38 
+ setflag                   46          23 
+ exit                      4A          7   C  
+ d                         4F          28  43 
+ n1                        50         
+ tempprod                  51          3A  3C  3D  42 
+ prod                      52         
+ count                     53          37  3E  40 
+ bin                       54          27 
+ flag                      55          46  48 
+ tot                       56          12  13  4C 
+ minus                     57          22 
+ value                     58          1E  2A  39 
+ @1                        59          17  1B  3F  47 
+ @10                       5A         
+ string                    5B          0  
+ string2                   8E          4A 
+ space                     AA          E   31  34 
+ null                      AB          B  
+ temp                      AD          8   A   D   2F  30 
+                                       33 
+ index                     AE          5   16  18  1A  1C 
+                                       24  2D 
+ buffer                    AF          3   4   20  25 
+
+Input file   = ass1.mas
+Output file  = ass1.mac
+List file    = ass1.lst 
+Number base  = decimal
+Label status = case sensitive

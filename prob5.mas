@@ -1,0 +1,50 @@
+                    ldc string2
+                    sout
+                    ldc n
+                    din
+                    st n
+
+
+
+loop:               ld n
+                    jz exit
+                    ldc string
+                    sout
+                    ldc input
+                    din
+                    st input
+                    ld input
+                    push
+                    ja abs
+rtn:                pop
+                    st input
+                    add total
+                    st total
+                    ld n
+                    sub one
+                    st n
+                    ja loop
+
+abs:                jzop rtn
+
+
+
+neg:                sub input
+                    sub input
+                    push
+                    ja rtn
+
+exit:               ldc final
+                    sout
+                    ld total
+                    dout
+                    halt
+
+
+string2:            dw "How many input integer?: "
+string:             dw "Enter an integer? "
+input:              dw 0
+total:              dw 0
+n:                  dw 0
+one:                dw 1
+final:              dw "The sum of the absolute values of the input values: "

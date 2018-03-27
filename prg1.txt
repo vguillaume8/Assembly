@@ -1,0 +1,71 @@
+xx:			dw 10
+yy:			dw 0
+			ldc string
+			sout
+			sin
+			st buffer
+
+loop:		ldc buffer
+			add index
+			ldi
+			st value
+			jz exit
+			sub space
+			jz inc_index
+			call num
+			ja loop
+
+			
+	
+
+
+
+inc_index:	ld index
+			add one
+			st index
+			ja loop
+
+num:		ldr value
+			addr 1
+			ret
+		
+
+mult:		ldc 0
+			st prod
+			ldr 1
+			jz ans
+
+exit: 		ld msg1
+			sout
+			ld value 
+			dout
+			halt
+
+
+
+
+
+
+
+
+ans:	ld prod
+		str 1	
+		ret
+
+space: dw 32
+
+value:	dw 0
+
+prod:	dw 0
+
+string: dw "Input a string of intergers seperated by spaces: "
+
+index:	dw 0
+
+one:	dw 0
+
+msg1: 	dw "The final value is: "
+
+buffer: dw 80 dup 0
+
+result: dw 80 dup 0

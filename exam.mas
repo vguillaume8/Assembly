@@ -1,0 +1,12 @@
+two:      dw      2
+          hout      ;opcode FFF9
+          dw       9008h ;hex constant
+start:    ld x    ;opcode 8
+          add x     ;op 2
+          dout      ;op FFFD
+          aout      ; op FFFB
+          ja  two   ;op 9
+          halt
+ x:       dw '10'       ; ‘9’ is hex 39
+ y:       dw 30
+ end   start
